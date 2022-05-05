@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Poppins', sans-serif;
+}
+
+.circle {
+    font-size: 15px;
+    padding: 75px;
+    margin: 10px;
+    background-color: rgb(45, 148, 121);
+    border-radius: 50%;
+    /* border: 2px solid; */
+    text-align: center;
+    box-sizing: content-box;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.cover {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom right, rgb(228, 120, 227), rgb(149, 107, 217));
+}
+
+.ampm {
+    padding: 24px;
+    border-radius: 50%;
+}
+
+.c1 {
+    border: 5px solid rgb(161, 34, 34);
+}
+
+.c2 {
+    border: 5px solid rgb(184, 198, 28);
+}
+
+.c3 {
+    border: 5px solid rgb(15, 165, 60);
+}
+

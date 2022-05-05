@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Digital Clock</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="cover">
+            <div class="circle c1">
+                <div id="hours">00</div>
+            </div>
+
+            <div class="circle c2">
+                <div id="minutes">00</div>
+            </div>
+
+            <div class="circle c3">
+                <div id="seconds">00</div>
+            </div>
+
+            <div class="ampm">
+                <div id="ampm">AM</div>
+            </div>
+        </div>
+    </body>
+
+    <script>
+        function getTime(){
+    
+        // use variables to get the element
+
+        let hours = document.getElementById('hours');
+        let minutes = document.getElementById('minutes');
+        let seconds = document.getElementById('seconds');
+        let ampm = document.getElementById('ampm');
+
+        // get info about the current time
+
+        let h = new Date().getHours();
+        let m = new Date().getMinutes();
+        let s = new Date().getSeconds();
+        var ap;
+
+        // AM - PM check 
+
+        if(h >= 12) {
+            h -= 12;
+            ap = "PM";
+        }
+        else ap = "AM";
+
+        // fill the number with zero 
+
+        if(h < 10) h = "0" + h;
+        if(m < 10) m = "0" + m;
+        if(s < 10) s = "0" + s;
+
+        // fill the content of the element with the variavle
+
+        ampm.innerHTML = ap;
+        hours.innerHTML = h;
+        minutes.innerHTML = m;
+        seconds.innerHTML = s;
+    }
+
+    setInterval(getTime);
+    // or u can use : setInterval(() => getTime());
+
+    /* 
+    - they are the same so that the "=>" is just use to 
+    shorten the funtion-calling in some cases but not this
+    
+    - remember that we don't use () in setInterval() and just
+    the name of  the funtion only !
+    */
+    </script>
+</html>
